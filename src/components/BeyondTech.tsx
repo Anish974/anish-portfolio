@@ -8,14 +8,16 @@ const hobbies = [
     description: "When I'm not coding, you'll find me on the volleyball court. I love the strategy, teamwork, and energy of the game.",
     icon: "🏐",
     instagram: "volley_champ1137",
-    instagramUrl: "https://instagram.com/volley_champ1137"
+    instagramUrl: "https://instagram.com/volley_champ1137",
+    image: "/assets/Volleyball.jpg"
   },
   {
     title: "Art & Creativity",
     description: "I express my creative side through various art forms, bringing the same attention to detail I apply to my code.",
     icon: "🎨",
     instagram: "artistic.anish",
-    instagramUrl: "https://instagram.com/artistic.anish"
+    instagramUrl: "https://instagram.com/artistic.anish",
+    image: "/assets/Art.jpg"
   }
 ];
 
@@ -36,7 +38,18 @@ export function BeyondTech() {
           {hobbies.map((hobby, index) => (
             <Card key={index} className="card-hover">
               <CardHeader>
-                <div className="text-5xl mb-4">{hobby.icon}</div>
+                {hobby.image ? (
+                  <figure className="border border-border rounded-lg overflow-hidden mb-4">
+                    <img
+                      src={hobby.image}
+                      alt={hobby.title}
+                      loading="lazy"
+                      className="w-full aspect-square object-cover"
+                    />
+                  </figure>
+                ) : (
+                  <div className="text-5xl mb-4">{hobby.icon}</div>
+                )}
                 <CardTitle className="text-2xl">{hobby.title}</CardTitle>
                 <CardDescription className="text-base">
                   {hobby.description}

@@ -2,27 +2,55 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const mailtoLink = `mailto:anishpatankar974@gmail.com?subject=Message from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${encodeURIComponent(formData.email)}`;
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Opening email client...",
-      description: "Your default email client will open with the message.",
-    });
-    
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "50701c96-e590-46b9-a825-d2fb2c7a22e2",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -74,8 +102,8 @@ export function Contact() {
                     rows={5}
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
@@ -90,7 +118,7 @@ export function Contact() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Button
+                {/* <Button
                   variant="outline"
                   className="w-full justify-start text-left h-auto py-4"
                   onClick={() => window.location.href = "mailto:anishpatankar974@gmail.com"}
@@ -100,7 +128,7 @@ export function Contact() {
                     <div className="font-medium">Email</div>
                     <div className="text-sm text-muted-foreground">anishpatankar974@gmail.com</div>
                   </div>
-                </Button>
+                </Button> */}
 
                 <Button
                   variant="outline"
@@ -123,6 +151,18 @@ export function Contact() {
                   <div>
                     <div className="font-medium">LinkedIn</div>
                     <div className="text-sm text-muted-foreground">Anish Patankar</div>
+                  </div>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left h-auto py-4"
+                  onClick={() => window.open("https://www.instagram.com/_anish_1137_/", "_blank")}
+                >
+                  <Instagram className="h-5 w-5 mr-3 flex-shrink-0" />
+                  <div>
+                    <div className="font-medium">Instagram</div>
+                    <div className="text-sm text-muted-foreground">@_anish_1137_</div>
                   </div>
                 </Button>
               </CardContent>

@@ -42,6 +42,12 @@ export function Navigation() {
               Beyond Tech
             </button>
             <button
+              onClick={() => scrollToSection("leadership")}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Leadership
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >

@@ -27,7 +27,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>Pune, India</span>
+                <span>Nagpur, India</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Briefcase className="h-4 w-4 text-primary" />
