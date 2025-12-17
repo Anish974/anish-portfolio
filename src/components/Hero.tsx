@@ -1,4 +1,4 @@
-import { MapPin, Briefcase } from "lucide-react";
+import { MapPin, Briefcase, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import profileImage from "@/assets/profile.jpg";
@@ -85,6 +85,21 @@ export function Hero() {
                   className="w-full sm:w-auto"
                 >
                   View Projects
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/assets/Anish Resume SDE-2.pdf';
+                    link.download = 'Anish_Patankar_Resume.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="w-full sm:w-auto"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Resume
                 </Button>
                 <Button
                   variant="outline"
