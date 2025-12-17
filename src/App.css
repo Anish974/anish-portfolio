@@ -27,10 +27,64 @@
   }
 }
 
+@keyframes typing-first {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 5.5ch;
+    opacity: 1;
+  }
+}
+
+@keyframes typing-second {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 9.5ch;
+    opacity: 1;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 49% {
+    border-right-color: currentColor;
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+.animate-typing-first {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid;
+  white-space: nowrap;
+  animation: typing-first 1.2s steps(6, end) forwards, cursor-blink 0.7s step-end infinite;
+}
+
+.animate-typing-second {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid;
+  white-space: nowrap;
+  animation: typing-second 2.4s steps(10, end) forwards, cursor-blink 0.7s step-end 1.2s infinite;
 }
 
 .card {

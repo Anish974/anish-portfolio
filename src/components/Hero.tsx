@@ -2,8 +2,40 @@ import { MapPin, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import profileImage from "@/assets/profile.jpg";
+import { useState, useEffect, useRef } from "react";
 
 export function Hero() {
+  const [displayedName, setDisplayedName] = useState("");
+  const fullName = "Anish Patankar";
+  const indexRef = useRef(0);
+  const isDeletingRef = useRef(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (!isDeletingRef.current) {
+        // Typing mode
+        if (indexRef.current <= fullName.length) {
+          setDisplayedName(fullName.slice(0, indexRef.current));
+          indexRef.current++;
+        } else {
+          // Start deleting after 1 second pause
+          isDeletingRef.current = true;
+        }
+      } else {
+        // Deleting mode
+        if (indexRef.current > 0) {
+          indexRef.current--;
+          setDisplayedName(fullName.slice(0, indexRef.current));
+        } else {
+          // Start typing again
+          isDeletingRef.current = false;
+        }
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center gradient-bg pt-20">
       <div className="container mx-auto px-6 py-20">
@@ -14,7 +46,7 @@ export function Hero() {
                 Web Developer
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                Hi, I'm <span className="gradient-text">Anish Patankar</span>
+                Hi, I'm <span className="gradient-text">{displayedName}</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
                 Turning ideas into code and data into insight
