@@ -39,43 +39,39 @@ const positions: never[] = [];
 export function Experience() {
 	return (
 		<section id="experience" className="section-padding bg-secondary/30">
-			<div className="container mx-auto">
-				<div className="text-center mb-10">
-					<h2 className="text-4xl md:text-5xl font-bold mb-4">
+			<div className="container mx-auto px-4">
+				<div className="text-center mb-8 sm:mb-10">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
 						Work{" "}
 						<span className="gradient-text">Experience</span>
 					</h2>
-					{/* <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-						Professional experience and leadership roles that have shaped my
-						career.
-					</p> */}
 				</div>
 
 				{/* Work Experience */}
-				<div className="mb-12">
-					<h3 className="text-2xl font-semibold mb-6 text-center">
+				<div className="mb-8 sm:mb-12">
+					<h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 sm:mb-6 text-center">
 						Professional Experience
 					</h3>
 					<div className="max-w-6xl mx-auto">
 						{experiences.map((exp, index) => (
-							<Card key={index} className="card-hover border-border mb-6">
-								<CardHeader className="pb-3">
-									<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+							<Card key={index} className="card-hover border-border mb-4 sm:mb-6">
+								<CardHeader className="pb-2 sm:pb-3">
+									<div className="flex flex-col gap-3 sm:gap-4">
 										<div>
-											<CardTitle className="text-2xl">{exp.company}</CardTitle>
-											<CardDescription className="text-base font-medium text-primary">
+											<CardTitle className="text-lg sm:text-xl md:text-2xl">{exp.company}</CardTitle>
+											<CardDescription className="text-xs sm:text-sm md:text-base font-medium text-primary">
 												{exp.title}
 											</CardDescription>
 										</div>
                     
                     {exp.link && (
-										<div className="text-center mt-4 flex flex-col items-center gap-1">
-											<span className="text-sm text-muted-foreground">beramdrones.com</span>
+										<div className="flex flex-col items-start sm:items-center gap-1 text-xs sm:text-sm">
+											<span className="text-muted-foreground">beramdrones.com</span>
 											<a
 												href={exp.link}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="inline-flex items-center gap-1 text-primary hover:underline text-sm"
+												className="inline-flex items-center gap-1 text-primary hover:underline"
 											>
 												Visit Website{" "}
 												<ExternalLink className="h-3 w-3" />
@@ -83,47 +79,44 @@ export function Experience() {
 										</div>
 									)}
 
-
-										<div className="flex flex-col items-start md:items-end gap-1 text-sm text-muted-foreground">
+										<div className="flex flex-col gap-2 text-xs sm:text-sm text-muted-foreground">
 											<span className="flex items-center gap-1">
-												<MapPin className="h-4 w-4" />
+												<MapPin className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
 												{exp.location}
 											</span>
 											<span className="flex items-center gap-1">
-												<Calendar className="h-4 w-4" />
+												<Calendar className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
 												{exp.period}
 											</span>
 										</div>
-									
-									
                   </div>
 								</CardHeader>
-								<CardContent>
-									<div className="grid md:grid-cols-2 gap-6">
+								<CardContent className="px-4 sm:px-6">
+									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
 										{exp.works?.map((work, workIndex) => (
 											<Card key={workIndex} className="h-full border-border bg-secondary/40 shadow-sm">
-												<CardContent className="p-4 space-y-3">
-													<h4 className="text-xl font-semibold">{work.title}</h4>
+												<CardContent className="p-3 sm:p-4 space-y-2 sm:space-y-3">
+													<h4 className="text-sm sm:text-base md:text-lg font-semibold">{work.title}</h4>
 													{work.image && (
 														<figure className="border border-border rounded-lg overflow-hidden">
 															<img
 																src={work.image}
 																alt={work.title}
 																loading="lazy"
-																className="w-full h-57 object-cover"
+																className="w-full h-32 sm:h-40 md:h-48 object-cover"
 															/>
 														</figure>
 													)}
-													<div className="flex flex-wrap gap-2">
+													<div className="flex flex-wrap gap-1 sm:gap-2">
 														{work.tech.map((tech, i) => (
-															<Badge key={i} variant="secondary" className="text-xs">
+															<Badge key={i} variant="secondary" className="text-xs sm:text-sm py-0.5 sm:py-1">
 																{tech}
 															</Badge>
 														))}
 													</div>
-													<ul className="list-disc list-inside space-y-2 text-base text-muted-foreground">
+													<ul className="list-disc list-inside space-y-1 sm:space-y-2 text-xs sm:text-sm md:text-base text-muted-foreground">
 														{work.description.map((item, i) => (
-															<li key={i}>{item}</li>
+															<li key={i} className="leading-tight sm:leading-normal">{item}</li>
 														))}
 													</ul>
 												</CardContent>
@@ -135,8 +128,6 @@ export function Experience() {
 						))}
 					</div>
 				</div>
-
-				{/* Leadership removed (now shown in BeyondTech) */}
 			</div>
 		</section>
 	);

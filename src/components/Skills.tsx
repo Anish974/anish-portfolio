@@ -71,17 +71,17 @@ const skillCategories: SkillCategory[] = [
 export function Skills() {
   return (
     <section id="skills" className="section-padding bg-background">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             My <span className="gradient-text">Skills</span>
           </h2>
         </div>
 
         <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8 bg-muted/50">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-4 sm:mb-6 md:mb-8 bg-muted/50 gap-0.5 sm:gap-1">
             {skillCategories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id} className="text-sm">
+              <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm py-2 sm:py-3">
                 {category.title}
               </TabsTrigger>
             ))}
@@ -89,11 +89,11 @@ export function Skills() {
 
           {skillCategories.map((category) => (
             <TabsContent key={category.id} value={category.id}>
-              <div className="bg-muted/30 rounded-lg p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-center mb-8 gradient-text">
+              <div className="bg-muted/30 rounded-lg p-3 sm:p-4 md:p-6 lg:p-8">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-4 sm:mb-6 gradient-text">
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap justify-center items-center gap-4">
+                <div className="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4">
                   {category.skills.map((skill, index) => {
                     // Logos with dark colors that need inversion in dark mode for visibility
                     const darkLogos = ["GitHub", "Git", "SQLite", "Flask"];
@@ -102,19 +102,19 @@ export function Skills() {
                     return (
                     <div
                       key={index}
-                      className="flex flex-col items-center justify-center p-3 rounded-lg hover:bg-primary/10 transition-colors duration-300 hover:scale-110 transform"
+                      className="flex flex-col items-center justify-center p-1.5 sm:p-2 md:p-3 rounded-lg hover:bg-primary/10 transition-colors duration-300 hover:scale-110 transform"
                     >
-                      <div className="w-14 h-14 flex items-center justify-center mb-2 rounded-lg bg-muted/50 dark:bg-muted/30">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center mb-0.5 sm:mb-1 md:mb-2 rounded-lg bg-muted/50 dark:bg-muted/30">
                         <img 
                           src={skill.logo} 
                           alt={skill.name}
-                          className={`w-10 h-10 object-contain mx-auto ${
+                          className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain mx-auto ${
                             needsInvert ? "dark:invert invert-0" : ""
                           }`}
                           loading="lazy"
                         />
                       </div>
-                      <p className="text-xs text-muted-foreground text-center font-medium">
+                      <p className="text-xs sm:text-sm text-muted-foreground text-center font-medium break-words max-w-[50px] sm:max-w-[70px]">
                         {skill.name}
                       </p>
                     </div>

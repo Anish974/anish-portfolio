@@ -24,22 +24,22 @@ const leadership = [
 export function Leadership() {
   return (
     <section id="leadership" className="section-padding bg-muted/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Leadership & <span className="gradient-text">Responsibilities</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-2">
             Roles and responsibilities that have shaped my leadership journey and team collaboration skills.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
           {leadership.map((item, index) => (
-            <Card key={index} className="card-hover border-border text-center">
-              <CardHeader className="pb-3">
+            <Card key={index} className="card-hover border-border text-center flex flex-col">
+              <CardHeader className="pb-2 sm:pb-3 flex-grow">
                 {item.image && (
-                  <figure className="border border-border rounded-lg overflow-hidden mb-4">
+                  <figure className="border border-border rounded-lg overflow-hidden mb-2 sm:mb-3">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -48,11 +48,11 @@ export function Leadership() {
                     />
                   </figure>
                 )}
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <CardDescription className="text-base text-muted-foreground">{item.period}</CardDescription>
+                <CardTitle className="text-sm sm:text-base md:text-lg">{item.title}</CardTitle>
+                <CardDescription className="text-xs sm:text-sm text-muted-foreground">{item.period}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-base text-muted-foreground">{item.description}</p>
+              <CardContent className="px-3 sm:px-4">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground text-left leading-relaxed">{item.description}</p>
               </CardContent>
             </Card>
           ))}

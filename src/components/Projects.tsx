@@ -147,59 +147,59 @@ function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-48 md:h-56 object-cover group-hover:opacity-0 transition-opacity duration-300"
+            className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover group-hover:opacity-0 transition-opacity duration-300"
           />
           {/* Details overlay - only subdetails on hover */}
-          <div className="absolute inset-0 p-4 md:p-6 flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80">
-            <CardDescription className="text-sm md:text-base text-gray-200 line-clamp-4">
+          <div className="absolute inset-0 p-2 sm:p-3 md:p-4 lg:p-6 flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80">
+            <CardDescription className="text-xs sm:text-sm md:text-base text-gray-200 line-clamp-4">
               {project.description}
             </CardDescription>
           </div>
         </div>
       ) : (
-        <CardHeader>
-          <div className="text-5xl mb-4">{project.icon}</div>
-          <CardTitle className="text-xl">{project.title}</CardTitle>
-          <CardDescription className="text-sm">
+        <CardHeader className="pb-2 sm:pb-3">
+          <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3">{project.icon}</div>
+          <CardTitle className="text-base sm:text-lg md:text-xl">{project.title}</CardTitle>
+          <CardDescription className="text-xs sm:text-sm">
             {project.description}
           </CardDescription>
         </CardHeader>
       )}
       {/* Title always visible below image when image exists */}
       {project.image && (
-        <div className="px-6 pt-4">
-          <CardTitle className="text-xl">{project.title}</CardTitle>
+        <div className="px-2 sm:px-3 md:px-4 lg:px-6 pt-2 sm:pt-3">
+          <CardTitle className="text-base sm:text-lg md:text-xl">{project.title}</CardTitle>
         </div>
       )}
-      <CardContent className="space-y-4 mt-auto">
-        <div className="flex flex-wrap gap-2">
+      <CardContent className="space-y-2 sm:space-y-3 mt-auto px-2 sm:px-3 md:px-4 lg:px-6 pb-3 sm:pb-4">
+        <div className="flex flex-wrap gap-1 sm:gap-2">
           {project.tech.map((tech, i) => (
-            <Badge key={i} variant="secondary" className="text-xs">
+            <Badge key={i} variant="secondary" className="text-xs sm:text-sm py-0.5 sm:py-1">
               {tech}
             </Badge>
           ))}
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-1.5 sm:gap-2 flex-col sm:flex-row">
           {project.githubUrl && (
             <Button
               variant="outline"
               size="sm"
-              className="flex-1 group"
+              className="w-full sm:flex-1 group text-xs sm:text-sm py-2 sm:py-2.5 h-auto"
               onClick={() => window.open(project.githubUrl, "_blank")}
             >
-              <Github className="h-4 w-4 mr-2" />
-              Code
+              <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 flex-shrink-0" />
+              <span className="truncate">Code</span>
             </Button>
           )}
           {project.liveUrl && (
             <Button
               variant="default"
               size="sm"
-              className="flex-1 group"
+              className="w-full sm:flex-1 group text-xs sm:text-sm py-2 sm:py-2.5 h-auto"
               onClick={() => window.open(project.liveUrl, "_blank")}
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Live
+              <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 flex-shrink-0" />
+              <span className="truncate">Live</span>
             </Button>
           )}
         </div>
@@ -211,24 +211,24 @@ function ProjectCard({ project }: { project: Project }) {
 export function Projects() {
   return (
     <section id="projects" className="section-padding bg-background">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-2">
             A selection of projects showcasing my expertise in machine learning, 
             web development, and building production-ready applications.
           </p>
         </div>
 
         <Tabs defaultValue="featured" className="w-full">
-          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4 items-center ">
+          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-2 sm:grid-cols-4 items-center gap-1 sm:gap-0">
             {Object.entries(projectCategories).map(([key, category]) => {
               const Icon = category.icon;
               return (
-                <TabsTrigger key={key} value={key} className="flex items-center gap-2 rounded-xl px-5  transition-colors duration-200 data-[state=active]:bg-background data-[state=active]:text-foreground hover:bg-background/60 shadow-sm">
-                  <Icon className="h-4 w-4" />
+                <TabsTrigger key={key} value={key} className="flex items-center gap-1 sm:gap-2 rounded-lg sm:rounded-xl px-2 sm:px-5 py-2 sm:py-3 text-xs sm:text-sm transition-colors duration-200 data-[state=active]:bg-background data-[state=active]:text-foreground hover:bg-background/60 shadow-sm">
+                  <Icon className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                   <span className="hidden sm:inline">{category.label}</span>
                 </TabsTrigger>
               );
@@ -237,9 +237,9 @@ export function Projects() {
 
           {Object.entries(projectCategories).map(([key, category]) => (
             <TabsContent key={key} value={key}>
-              <div className={`${category.projects.length < 3 ? 'flex flex-wrap justify-center gap-6 max-w-4xl mx-auto' : 'grid md:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
+              <div className={`${category.projects.length < 3 ? 'flex flex-wrap justify-center gap-4 sm:gap-5 md:gap-6 max-w-4xl mx-auto' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6'}`}>
                 {category.projects.map((project, index) => (
-                  <div key={index} className={`${category.projects.length === 1 ? 'w-full max-w-md' : category.projects.length === 2 ? 'w-full md:w-[calc(50%-0.75rem)] max-w-md' : ''}`}>
+                  <div key={index} className={`${category.projects.length === 1 ? 'w-full max-w-md' : category.projects.length === 2 ? 'w-full sm:max-w-md' : ''}`}>
                     <ProjectCard project={project} />
                   </div>
                 ))}

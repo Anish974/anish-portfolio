@@ -37,24 +37,24 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center gradient-bg pt-20">
-      <div className="container mx-auto px-6 py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 space-y-6 text-center md:text-left">
+    <section className="min-h-screen flex items-center justify-center gradient-bg pt-16 sm:pt-20">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+          <div className="flex-1 space-y-4 sm:space-y-6 text-center md:text-left">
             <div className="space-y-2">
-              <p className="text-sm uppercase tracking-wider text-muted-foreground font-medium">
+              <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground font-medium">
                 Web Developer
               </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Hi, I'm <span className="gradient-text">{displayedName}</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
                 Turning ideas into code and data into insight
               </p>
             </div>
 
-            <div className="space-y-4">
-              <p className="text-lg text-muted-foreground max-w-2xl">
+            <div className="space-y-4 w-full">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl">
                 A Final Year B.Tech student at RCOEM,
                 AI/ML‑focused CSE undergraduate with hands‑on experience in full‑stack web development, database
                 systems, and real‑time machine learning applications. Passionate about drone technologies,
@@ -78,28 +78,30 @@ export function Hero() {
                 ))}
               </div> */}
 
-              <div className="flex gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full sm:w-auto">
                 <Button
                   onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                  className="w-full sm:w-auto"
                 >
                   View Projects
                 </Button>
                 <Button
                   variant="outline"
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  className="w-full sm:w-auto"
                 >
                   Contact Me
                 </Button>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center md:justify-start text-xs sm:text-sm">
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="h-4 w-4 flex-shrink-0" />
                 <span>Nagpur, India</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Briefcase className="h-4 w-4 text-primary" />
+              <div className="flex items-center gap-2">
+                <Briefcase className="h-4 w-4 text-primary flex-shrink-0" />
                 <span className="font-medium">Open to: Freelance & Collaborations</span>
               </div>
             </div>

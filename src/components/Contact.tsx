@@ -55,27 +55,27 @@ export function Contact() {
 
   return (
     <section id="contact" className="section-padding bg-muted/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-2">
             Have a project in mind or want to collaborate? I'm always open to discussing 
             new opportunities and innovative ideas.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           <Card className="card-hover">
-            <CardHeader>
-              <CardTitle className="text-2xl">Get in Touch</CardTitle>
-              <CardDescription>
+            <CardHeader className="pb-3 sm:pb-4">
+              <CardTitle className="text-lg sm:text-xl md:text-2xl">Get in Touch</CardTitle>
+              <CardDescription className="text-xs sm:text-sm">
                 Send me a message and I'll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <CardContent className="px-4 sm:px-6">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 <div>
                   <Input
                     placeholder="Your Name"
@@ -102,22 +102,22 @@ export function Contact() {
                     rows={5}
                   />
                 </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button type="submit" className="w-full text-xs sm:text-sm py-2 sm:py-2.5" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
           </Card>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="text-2xl">Direct Contact</CardTitle>
-                <CardDescription>
+              <CardHeader className="pb-3 sm:pb-4">
+                <CardTitle className="text-lg sm:text-xl md:text-2xl">Direct Contact</CardTitle>
+                <CardDescription className="text-xs sm:text-sm">
                   Prefer to reach out directly? Here are my contact details.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-2 sm:space-y-3 px-4 sm:px-6">
                 {/* <Button
                   variant="outline"
                   className="w-full justify-start text-left h-auto py-4"
@@ -132,37 +132,37 @@ export function Contact() {
 
                 <Button
                   variant="outline"
-                  className="w-full justify-start text-left h-auto py-4"
+                  className="w-full justify-start text-left h-auto py-2.5 sm:py-3 text-xs sm:text-sm"
                   onClick={() => window.open("https://github.com/Anish974", "_blank")}
                 >
-                  <Github className="h-5 w-5 mr-3 flex-shrink-0" />
+                  <Github className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 flex-shrink-0" />
                   <div>
                     <div className="font-medium">GitHub</div>
-                    <div className="text-sm text-muted-foreground">@Anish974</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">@Anish974</div>
                   </div>
                 </Button>
 
                 <Button
                   variant="outline"
-                  className="w-full justify-start text-left h-auto py-4"
+                  className="w-full justify-start text-left h-auto py-2.5 sm:py-3 text-xs sm:text-sm"
                   onClick={() => window.open("https://www.linkedin.com/in/anish-patankar-47421b25a/", "_blank")}
                 >
-                  <Linkedin className="h-5 w-5 mr-3 flex-shrink-0" />
+                  <Linkedin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 flex-shrink-0" />
                   <div>
                     <div className="font-medium">LinkedIn</div>
-                    <div className="text-sm text-muted-foreground">Anish Patankar</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">Anish Patankar</div>
                   </div>
                 </Button>
 
                 <Button
                   variant="outline"
-                  className="w-full justify-start text-left h-auto py-4"
+                  className="w-full justify-start text-left h-auto py-2.5 sm:py-3 text-xs sm:text-sm"
                   onClick={() => window.open("https://www.instagram.com/_anish_1137_/", "_blank")}
                 >
-                  <Instagram className="h-5 w-5 mr-3 flex-shrink-0" />
+                  <Instagram className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 flex-shrink-0" />
                   <div>
                     <div className="font-medium">Instagram</div>
-                    <div className="text-sm text-muted-foreground">@_anish_1137_</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">@_anish_1137_</div>
                   </div>
                 </Button>
               </CardContent>
