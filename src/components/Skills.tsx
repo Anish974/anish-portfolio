@@ -1,4 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 interface SkillItem {
   name: string;
@@ -124,6 +126,33 @@ export function Skills() {
             </TabsContent>
           ))}
         </Tabs>
+
+        {/* Competitive Programming Platforms */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mt-8 sm:mt-12 max-w-2xl mx-auto">
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto group text-sm sm:text-base"
+            onClick={() => window.open("https://leetcode.com/u/Anish1137/", "_blank")}
+          >
+            <svg className="h-5 w-5 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+            </svg>
+            LeetCode Profile
+            <ExternalLink className="h-4 w-4 ml-2 opacity-70 group-hover:opacity-100 transition-opacity" />
+          </Button>
+          
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto group text-sm sm:text-base"
+            onClick={() => window.open("https://www.hackerrank.com/profile/anishpatankar974", "_blank")}
+          >
+            <svg className="h-5 w-5 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24s-9.75-4.885-10.395-6c-.641-1.115-.641-10.885 0-12C2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701c.141 0 .254-.115.254-.258 0-.094-.049-.176-.123-.221L9.223 4.92c-.049-.063-.141-.109-.226-.109-.084 0-.16.045-.207.107L7.218 6.43c-.072.045-.12.126-.12.218 0 .143.113.258.255.258h.704v4.145c0 .143.113.258.255.258h4.213c.141 0 .254-.115.254-.258v-4.32c0-.141-.113-.254-.254-.254h-.23zm-2.314 7.633c-.738-.219-1.032-.369-1.032-.738 0-.262.22-.477.627-.477.396 0 .656.146.838.477.068.123.158.162.287.162.158 0 .273-.105.273-.262v-.053c0-.09-.014-.193-.133-.36-.23-.318-.686-.631-1.29-.631-1.027 0-1.754.615-1.754 1.486 0 .877.545 1.236 1.594 1.553.67.201.917.352.917.676 0 .369-.273.604-.707.604-.492 0-.836-.252-.947-.693-.029-.117-.117-.205-.268-.205-.158 0-.273.115-.273.273v.047c0 .068.012.143.045.217.205.541.738.969 1.443.969 1.092 0 1.838-.68 1.838-1.674 0-.8-.455-1.145-1.457-1.37z"/>
+            </svg>
+            HackerRank Profile
+            <ExternalLink className="h-4 w-4 ml-2 opacity-70 group-hover:opacity-100 transition-opacity" />
+          </Button>
+        </div>
       </div>
     </section>
   );
