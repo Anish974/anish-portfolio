@@ -223,11 +223,11 @@ export function Projects() {
         </div>
 
         <Tabs defaultValue="featured" className="w-full">
-          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-2 sm:grid-cols-4 items-center gap-1 sm:gap-0">
+          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-2 sm:grid-cols-4 items-center gap-1 sm:gap-0 bg-muted/40 rounded-lg p-1 mb-6 sm:mb-8">
             {Object.entries(projectCategories).map(([key, category]) => {
               const Icon = category.icon;
               return (
-                <TabsTrigger key={key} value={key} className="flex items-center gap-1 sm:gap-2 rounded-lg sm:rounded-xl px-2 sm:px-5 py-2 sm:py-3 text-xs sm:text-sm transition-colors duration-200 data-[state=active]:bg-background data-[state=active]:text-foreground hover:bg-background/60 shadow-sm">
+                <TabsTrigger key={key} value={key} className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 rounded-md px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm font-medium transition-all duration-200 data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-md data-[state=inactive]:text-muted-foreground hover:text-foreground">
                   <Icon className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
                   <span className="hidden sm:inline">{category.label}</span>
                 </TabsTrigger>

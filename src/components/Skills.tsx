@@ -79,9 +79,9 @@ export function Skills() {
         </div>
 
         <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-4 sm:mb-6 md:mb-8 bg-muted/50 gap-0.5 sm:gap-1">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-4 sm:mb-6 md:mb-8 bg-muted/40 rounded-lg p-1 gap-0.5 sm:gap-1">
             {skillCategories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm py-2 sm:py-3">
+              <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm py-2 sm:py-3 font-medium rounded-md transition-all duration-200 data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-md data-[state=inactive]:text-muted-foreground hover:text-foreground">
                 {category.title}
               </TabsTrigger>
             ))}
