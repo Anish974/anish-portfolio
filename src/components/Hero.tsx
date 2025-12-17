@@ -1,4 +1,6 @@
 import { MapPin, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import profileImage from "@/assets/profile.jpg";
 
 export function Hero() {
@@ -12,17 +14,52 @@ export function Hero() {
                 Web Developer
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                Hi, I'm <span className="gradient-text">Anish</span>
+                Hi, I'm <span className="gradient-text">Anish Patankar</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
                 Turning ideas into code and data into insight
               </p>
             </div>
 
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              Building intelligent, user-focused web apps with Python, Django/Flask, and machine learning. 
-              I love turning ideas into production-ready code and data into insight.
-            </p>
+            <div className="space-y-4">
+              <p className="text-lg text-muted-foreground max-w-2xl">
+                A Final Year B.Tech student at RCOEM,
+                AI/ML‑focused CSE undergraduate with hands‑on experience in full‑stack web development, database
+                systems, and real‑time machine learning applications. Passionate about drone technologies,
+                automation, and building secure, user‑centric digital solutions.
+              </p>
+
+              {/* <div className="flex flex-wrap gap-2">
+                {[
+                  "React",
+                  "TypeScript",
+                  "Python",
+                  "Flask",
+                  "YOLOv8",
+                  "Tailwind CSS",
+                  "WebSockets",
+                  "Nginx"
+                ].map((skill) => (
+                  <Badge key={skill} variant="secondary" className="text-xs">
+                    {skill}
+                  </Badge>
+                ))}
+              </div> */}
+
+              <div className="flex gap-3 pt-2">
+                <Button
+                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  View Projects
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Contact Me
+                </Button>
+              </div>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">

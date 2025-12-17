@@ -33,7 +33,7 @@ const projectCategories = {
         description: "Real-time Orange Detection System using fine-tuned YOLOv8 on a custom dataset. Features responsive web interface with drag-and-drop upload, live camera capture, dark mode, and Flask-based detection API.",
         tech: ["Python", "Flask", "YOLOv8", "OpenCV", "HTML", "CSS", "JS"],
         icon: "🍊",
-        githubUrl: "https://github.com/Anish974",
+        githubUrl: "https://github.com/Anish974/Orange-Counter",
         image: "/assets/orangecount.png"
       },
       {
@@ -41,7 +41,7 @@ const projectCategories = {
         description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
         tech: ["HTML", "CSS", "JavaScript"],
         icon: "",
-        githubUrl: "https://github.com/Anish974",
+        // githubUrl: "https://github.com/Anish974",
         liveUrl: "https://sticktoon.netlify.app/",
         image: "/assets/sticktoon.png"
       }
@@ -56,7 +56,7 @@ const projectCategories = {
         description: "Real-time Orange Detection System using fine-tuned YOLOv8 on a custom dataset. Features responsive web interface with drag-and-drop upload, live camera capture, dark mode, and Flask-based detection API.",
         tech: ["Python", "Flask", "YOLOv8", "OpenCV", "HTML", "CSS", "JS"],
         icon: "🍊",
-        githubUrl: "https://github.com/Anish974",
+        githubUrl: "https://github.com/Anish974/Orange-Counter",
         image: "/assets/orangecount.png"
        }
       //,
@@ -94,42 +94,43 @@ const projectCategories = {
         description: "Modern, responsive personal portfolio showcasing projects and skills with dark mode support and smooth animations.",
         tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
         icon: "",
+        githubUrl: "https://github.com/Anish974/anish-portfolio",
         liveUrl: "https://anishpatankar.vercel.app/",
         image: "/assets/Portfolio.png"
       }
     ]
   },
-  backend: {
-    label: "Backend / DevOps",
-    icon: Code,
-    projects: [
-      {
-        title: "UTMS Server Infrastructure",
-        description: "Developed personal server infrastructure from old PC using Ubuntu, Nginx, Flask, and Cloudflare Tunnel. Contributed to UTMS for drone tracking in Indian airspace.",
-        tech: ["Ubuntu", "Nginx", "Flask", "Cloudflare Tunnel", "Python"],
-        icon: "",
-        githubUrl: "https://github.com/Anish974"
+  // backend: {
+  //   label: "Backend / DevOps",
+  //   icon: Code,
+  //   projects: [
+  //     {
+  //       title: "UTMS Server Infrastructure",
+  //       description: "Developed personal server infrastructure from old PC using Ubuntu, Nginx, Flask, and Cloudflare Tunnel. Contributed to UTMS for drone tracking in Indian airspace.",
+  //       tech: ["Ubuntu", "Nginx", "Flask", "Cloudflare Tunnel", "Python"],
+  //       icon: "",
+  //       githubUrl: "https://github.com/Anish974"
         
-      }
-    ]
-  },
+  //     }
+  //   ]
+  // },
   freelance: {
     label: "Freelance Projects",
     icon: Briefcase,
     projects: [
-      {
-        title: "Digital Literature Diary",
-        description: "A digital diary and reading tracker with secure admin login, poem vault with write/edit/share capabilities, and clean minimal interface for reading milestones.",
-        tech: ["React", "SQL", "CSS"],
-        icon: "📚",
-        githubUrl: "https://github.com/Anish974"
-      },
+      // {
+      //   title: "Digital Literature Diary",
+      //   description: "A digital diary and reading tracker with secure admin login, poem vault with write/edit/share capabilities, and clean minimal interface for reading milestones.",
+      //   tech: ["React", "SQL", "CSS"],
+      //   icon: "📚",
+      //   githubUrl: "https://github.com/Anish974"
+      // },
       {
         title: "StickToon E-Commerce",
         description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
         tech: ["HTML", "CSS", "JavaScript"],
         icon: "",
-        githubUrl: "https://github.com/Anish974",
+        // githubUrl: "https://github.com/Anish974",
         liveUrl: "https://sticktoon.netlify.app/",
         image: "/assets/sticktoon.png"
       }
@@ -222,11 +223,11 @@ export function Projects() {
         </div>
 
         <Tabs defaultValue="featured" className="w-full">
-          <TabsList className="grid w-full max-w-5xl mx-auto grid-cols-5 mb-8">
+          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4 items-center ">
             {Object.entries(projectCategories).map(([key, category]) => {
               const Icon = category.icon;
               return (
-                <TabsTrigger key={key} value={key} className="flex items-center gap-2">
+                <TabsTrigger key={key} value={key} className="flex items-center gap-2 rounded-xl px-5  transition-colors duration-200 data-[state=active]:bg-background data-[state=active]:text-foreground hover:bg-background/60 shadow-sm">
                   <Icon className="h-4 w-4" />
                   <span className="hidden sm:inline">{category.label}</span>
                 </TabsTrigger>
@@ -236,9 +237,11 @@ export function Projects() {
 
           {Object.entries(projectCategories).map(([key, category]) => (
             <TabsContent key={key} value={key}>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={`${category.projects.length < 3 ? 'flex flex-wrap justify-center gap-6 max-w-4xl mx-auto' : 'grid md:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
                 {category.projects.map((project, index) => (
-                  <ProjectCard key={index} project={project} />
+                  <div key={index} className={`${category.projects.length === 1 ? 'w-full max-w-md' : category.projects.length === 2 ? 'w-full md:w-[calc(50%-0.75rem)] max-w-md' : ''}`}>
+                    <ProjectCard project={project} />
+                  </div>
                 ))}
               </div>
             </TabsContent>

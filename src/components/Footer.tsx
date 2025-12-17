@@ -8,9 +8,9 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {currentYear} Anish Patankar. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
+          {/* <p className="text-sm text-muted-foreground">
             Built with <span className="gradient-text font-medium">Python • Web • ML</span>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

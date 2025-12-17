@@ -18,6 +18,12 @@ export function Navigation() {
           
           <div className="hidden md:flex items-center gap-8">
             <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Home
+            </button>
+            <button
               onClick={() => scrollToSection("experience")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
