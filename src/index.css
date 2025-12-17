@@ -161,7 +161,8 @@ All colors MUST be HSL.
   }
   
   .section-padding {
-    @apply py-20 px-6 md:px-12 lg:px-24;
+    /* Tighter vertical spacing on mobile, generous on desktop */
+    @apply py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-24;
   }
 }
 

@@ -1,10 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, ExternalLink } from "lucide-react";
 
 const experiences = [
 	{
-		title: "Co-Founder",
+		title: "Intern",
 		company: "BERAM Pvt. Ltd.",
 		location: "Nagpur",
 		period: "June 2025 – Present",
@@ -29,6 +30,7 @@ const experiences = [
 				],
 				tech: ["Ubuntu", "Nginx", "Cloudflare Tunnel", "Linux", "Web Hosting"],
 				image: "/assets/Indegenous-server.jpg",
+				blogUrl: "https://beramdrones.com/blog/server_blog",
 			},
 		],
 	},
@@ -56,16 +58,16 @@ export function Experience() {
 						{experiences.map((exp, index) => (
 							<Card key={index} className="card-hover border-border mb-4 sm:mb-6">
 								<CardHeader className="pb-2 sm:pb-3">
-									<div className="flex flex-col gap-3 sm:gap-4">
-										<div>
+									<div className="flex flex-wrap items-start sm:items-center justify-between gap-3 sm:gap-4">
+										<div className="flex-1 min-w-[180px]">
 											<CardTitle className="text-lg sm:text-xl md:text-2xl">{exp.company}</CardTitle>
 											<CardDescription className="text-xs sm:text-sm md:text-base font-medium text-primary">
 												{exp.title}
 											</CardDescription>
 										</div>
                     
-                    {exp.link && (
-										<div className="flex flex-col items-start sm:items-center gap-1 text-xs sm:text-sm">
+							{exp.link && (
+										<div className="flex-none text-center gap-1 text-xs sm:text-sm">
 											<span className="text-muted-foreground">beramdrones.com</span>
 											<a
 												href={exp.link}
@@ -79,7 +81,7 @@ export function Experience() {
 										</div>
 									)}
 
-										<div className="flex flex-col gap-2 text-xs sm:text-sm text-muted-foreground">
+										<div className="flex flex-col items-center sm:items-end gap-1 text-xs sm:text-sm text-muted-foreground flex-1 min-w-[180px]">
 											<span className="flex items-center gap-1">
 												<MapPin className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
 												{exp.location}
@@ -89,7 +91,7 @@ export function Experience() {
 												{exp.period}
 											</span>
 										</div>
-                  </div>
+										</div>
 								</CardHeader>
 								<CardContent className="px-4 sm:px-6">
 									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -103,7 +105,7 @@ export function Experience() {
 																src={work.image}
 																alt={work.title}
 																loading="lazy"
-																className="w-full h-32 sm:h-40 md:h-48 object-cover"
+																className="w-full h-auto object-contain"
 															/>
 														</figure>
 													)}
@@ -118,7 +120,19 @@ export function Experience() {
 														{work.description.map((item, i) => (
 															<li key={i} className="leading-tight sm:leading-normal">{item}</li>
 														))}
-													</ul>
+																									</ul>
+																									{work.blogUrl && (
+																										<div className="pt-2 w-full flex justify-center">
+																											<Button
+																												variant="outline"
+																												size="sm"
+																												className="text-xs sm:text-sm"
+																												onClick={() => window.open(work.blogUrl!, "_blank")}
+																											>
+																												View Blog
+																											</Button>
+																										</div>
+																									)}
 												</CardContent>
 											</Card>
 										))}

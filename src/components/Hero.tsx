@@ -39,7 +39,7 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center gradient-bg pt-16 sm:pt-20">
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-10">
           <div className="flex-1 space-y-4 sm:space-y-6 text-center md:text-left">
             <div className="space-y-2">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground font-medium">

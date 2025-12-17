@@ -17,7 +17,6 @@ const skillCategories: SkillCategory[] = [
     title: "Programming Languages",
     skills: [
       { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-      { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
       { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
       { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
       { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" },
@@ -79,9 +78,9 @@ export function Skills() {
         </div>
 
         <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-4 sm:mb-6 md:mb-8 bg-muted/40 rounded-lg p-1 gap-0.5 sm:gap-1">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 mb-4 sm:mb-6 md:mb-8 bg-transparent gap-1 sm:gap-2 md:gap-3 p-0">
             {skillCategories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm py-2 sm:py-3 font-medium rounded-md transition-all duration-200 data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-md data-[state=inactive]:text-muted-foreground hover:text-foreground">
+              <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm py-2 sm:py-2.5 px-2 sm:px-3 rounded-lg bg-muted hover:bg-muted/80 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-colors">
                 {category.title}
               </TabsTrigger>
             ))}
@@ -89,7 +88,7 @@ export function Skills() {
 
           {skillCategories.map((category) => (
             <TabsContent key={category.id} value={category.id}>
-              <div className="bg-muted/30 rounded-lg p-3 sm:p-4 md:p-6 lg:p-8">
+              <div className="bg-muted/30 rounded-lg p-4 sm:p-6 md:p-8 lg:p-10 pt-20 sm:pt-6 md:pt-8 lg:pt-10">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-4 sm:mb-6 gradient-text">
                   {category.title}
                 </h3>
