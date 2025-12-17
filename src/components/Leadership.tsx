@@ -23,7 +23,7 @@ const leadership = [
 
 export function Leadership() {
   return (
-    <section id="leadership" className="section-padding bg-muted/30">
+    <section id="leadership" className="section-padding bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">

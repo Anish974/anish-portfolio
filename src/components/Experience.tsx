@@ -40,7 +40,7 @@ const positions: never[] = [];
 
 export function Experience() {
 	return (
-		<section id="experience" className="section-padding bg-secondary/30">
+		<section id="experience" className="section-padding bg-muted/50">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-8 sm:mb-10">
 					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
@@ -67,7 +67,7 @@ export function Experience() {
 										</div>
                     
 							{exp.link && (
-										<div className="flex-none text-center gap-1 text-xs sm:text-sm">
+										<div className="flex-none flex flex-col items-center text-center gap-1 text-xs sm:text-sm">
 											<span className="text-muted-foreground">beramdrones.com</span>
 											<a
 												href={exp.link}

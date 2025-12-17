@@ -54,7 +54,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-muted/30">
+    <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
@@ -118,17 +118,17 @@ export function Contact() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2 sm:space-y-3 px-4 sm:px-6">
-                {/* <Button
+                <Button
                   variant="outline"
-                  className="w-full justify-start text-left h-auto py-4"
+                  className="w-full justify-start text-left h-auto py-2.5 sm:py-3 text-xs sm:text-sm"
                   onClick={() => window.location.href = "mailto:anishpatankar974@gmail.com"}
                 >
-                  <Mail className="h-5 w-5 mr-3 flex-shrink-0" />
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 flex-shrink-0" />
                   <div>
                     <div className="font-medium">Email</div>
-                    <div className="text-sm text-muted-foreground">anishpatankar974@gmail.com</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground">anishpatankar974@gmail.com</div>
                   </div>
-                </Button> */}
+                </Button>
 
                 <Button
                   variant="outline"

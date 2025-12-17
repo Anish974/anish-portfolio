@@ -39,7 +39,7 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center gradient-bg pt-16 sm:pt-20">
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 md:gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-3 md:gap-4">
           <div className="flex-1 space-y-4 sm:space-y-6 text-center md:text-left">
             <div className="space-y-2">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground font-medium">
@@ -48,17 +48,18 @@ export function Hero() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Hi, I'm <span className="gradient-text">{displayedName}</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground">
-                Turning ideas into code and data into insight
-              </p>
+              
             </div>
 
             <div className="space-y-4 w-full">
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl">
-                A Final Year B.Tech student at RCOEM,
+                A Final Year B-Tech student at RCOEM,
                 AI/ML‑focused CSE undergraduate with hands‑on experience in full‑stack web development, database
                 systems, and real‑time machine learning applications. Passionate about drone technologies,
                 automation, and building secure, user‑centric digital solutions.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground ">
+                Turning ideas into code and data into insight
               </p>
 
               {/* <div className="flex flex-wrap gap-2">
