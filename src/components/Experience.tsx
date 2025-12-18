@@ -36,8 +36,6 @@ const experiences = [
 	},
 ];
 
-const positions: never[] = [];
-
 export function Experience() {
 	return (
 		<section id="experience" className="section-padding bg-muted/50">

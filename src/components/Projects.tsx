@@ -58,22 +58,7 @@ const projectCategories = {
         icon: "🍊",
         githubUrl: "https://github.com/Anish974/Orange-Counter",
         image: "/assets/orangecount.png"
-       }
-      //,
-      // {
-      //   title: "AI Chat Web App",
-      //   description: "An intelligent conversational interface powered by NLP and Transformer models, delivering context-aware responses in real-time.",
-      //   tech: ["Flask", "Python", "NLP", "Transformers", "REST API"],
-      //   icon: "",
-      //   githubUrl: "https://github.com/Anish974"
-      // },
-      // {
-      //   title: "Movie Recommender",
-      //   description: "Collaborative filtering system that provides personalized movie recommendations based on user preferences and viewing history.",
-      //   tech: ["Django", "Python", "scikit-learn", "ML", "PostgreSQL"],
-      //   icon: "",
-      //   githubUrl: "https://github.com/Anish974"
-      // }
+      }
     ]
   },
   webdev: {
@@ -100,20 +85,6 @@ const projectCategories = {
       }
     ]
   },
-  // backend: {
-  //   label: "Backend / DevOps",
-  //   icon: Code,
-  //   projects: [
-  //     {
-  //       title: "UTMS Server Infrastructure",
-  //       description: "Developed personal server infrastructure from old PC using Ubuntu, Nginx, Flask, and Cloudflare Tunnel. Contributed to UTMS for drone tracking in Indian airspace.",
-  //       tech: ["Ubuntu", "Nginx", "Flask", "Cloudflare Tunnel", "Python"],
-  //       icon: "",
-  //       githubUrl: "https://github.com/Anish974"
-        
-  //     }
-  //   ]
-  // },
   freelance: {
     label: "Freelance Projects",
     icon: Briefcase,

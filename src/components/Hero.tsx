@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import profileImage from "@/assets/profile.jpg";
 import { useState, useEffect, useRef } from "react";
+import Lottie from "lottie-react";
+import animationData from "@/assets/Background looping animation.json";
 
 export function Hero() {
   const [displayedName, setDisplayedName] = useState("");
@@ -37,8 +39,18 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center gradient-bg pt-16 sm:pt-20">
-      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+    <section className="min-h-screen flex items-center justify-center gradient-bg pt-16 sm:pt-20 relative overflow-hidden">
+      {/* Lottie Background Animation */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <Lottie
+          animationData={animationData}
+          loop={true}
+          autoplay={true}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-3 md:gap-4">
           <div className="flex-1 space-y-4 sm:space-y-6 text-center md:text-left">
             <div className="space-y-2">
@@ -62,26 +74,17 @@ export function Hero() {
                 Turning ideas into code and data into insight
               </p>
 
-              {/* <div className="flex flex-wrap gap-2">
-                {[
-                  "React",
-                  "TypeScript",
-                  "Python",
-                  "Flask",
-                  "YOLOv8",
-                  "Tailwind CSS",
-                  "WebSockets",
-                  "Nginx"
-                ].map((skill) => (
-                  <Badge key={skill} variant="secondary" className="text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div> */}
-
               <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full sm:w-auto">
                 <Button
-                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => {
+                    const element = document.getElementById("projects");
+                    if (element) {
+                      const navHeight = 80;
+                      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                      const offsetPosition = elementPosition - navHeight;
+                      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                  }}
                   className="w-full sm:w-auto"
                 >
                   View Projects
@@ -103,7 +106,15 @@ export function Hero() {
                 </Button>
                 <Button
                   variant="outline"
-                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => {
+                    const element = document.getElementById("contact");
+                    if (element) {
+                      const navHeight = 80;
+                      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                      const offsetPosition = elementPosition - navHeight;
+                      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                  }}
                   className="w-full sm:w-auto"
                 >
                   Contact Me
