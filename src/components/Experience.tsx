@@ -12,14 +12,14 @@ const experiences = [
 		link: "https://beramdrones.com",
 		works: [
 			{
-				title: "UTMS‑MVP : Unmanned Traffic Management System",
+				title: "ATMS‑MVP : Arial Traffic Management System",
 				description: [
 					"Built an interactive React dashboard to monitor and control drone state, missions, and safety workflows in real time.",
 					"Implemented live telemetry streaming over WebSockets for continuous updates of position, attitude, battery, and mission status.",
 					"Developed Python backend scripts (Flask + pymavlink) to handle MAVLink communication, mission execution, and failsafe logic with the Pixhawk flight controller.",
 				],
 				tech: ["React", "Node.js", "Python", "Flask", "WebSocket" ,"MAVLink"],
-				image: "/assets/utms-dashboard.png",
+				image: "/assets/atms-dashboard.png",
 			},
 			{
 				title: "Indigenous Server : A Self-Hosted Infrastructure",
