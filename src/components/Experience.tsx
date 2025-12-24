@@ -12,7 +12,7 @@ const experiences = [
 		link: "https://beramdrones.com",
 		works: [
 			{
-				title: "ATMS‑MVP : Arial Traffic Management System",
+				title: "ATMS‑MVP : Aerial Traffic Management System",
 				description: [
 					"Built an interactive React dashboard to monitor and control drone state, missions, and safety workflows in real time.",
 					"Implemented live telemetry streaming over WebSockets for continuous updates of position, attitude, battery, and mission status.",
