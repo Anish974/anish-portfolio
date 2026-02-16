@@ -39,11 +39,11 @@ const projectCategories = {
       {
         title: "StickToon E-Commerce",
         description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
-        tech: ["HTML", "CSS", "JavaScript"],
+        tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
         icon: "",
         // githubUrl: "https://github.com/Anish974",
-        liveUrl: "https://sticktoon.netlify.app/",
-        image: "/assets/sticktoon.png"
+        liveUrl: "https://sticktoon.shop/",
+        image: "/assets/StickToonFront.png"
       }
     ]
   },
@@ -99,11 +99,11 @@ const projectCategories = {
       {
         title: "StickToon E-Commerce",
         description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
-        tech: ["HTML", "CSS", "JavaScript"],
+        tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
         icon: "",
         // githubUrl: "https://github.com/Anish974",
-        liveUrl: "https://sticktoon.netlify.app/",
-        image: "/assets/sticktoon.png"
+        liveUrl: "https://sticktoon.shop/",
+        image: "/assets/StickToonFront.png"
       }
     ]
   }
