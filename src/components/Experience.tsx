@@ -18,7 +18,7 @@ const experiences = [
 					"Implemented live telemetry streaming over WebSockets for continuous updates of position, attitude, battery, and mission status.",
 					"Developed Python backend scripts (Flask + pymavlink) to handle MAVLink communication, mission execution, and failsafe logic with the Pixhawk flight controller.",
 				],
-				tech: ["React", "Node.js", "Python", "Flask", "WebSocket" ,"MAVLink"],
+				tech: ["React", "Node.js", "Python", "Flask", "WebSocket" ,"MAVLink" ,"Pixhawk" ,"ArduPilot"],
 				image: "/assets/atms-dashboard.png",
 			},
 			{
