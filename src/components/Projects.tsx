@@ -20,6 +20,23 @@ const projectCategories = {
     icon: Globe,
     projects: [
       {
+        title: "LimitUP",
+        description: "LimitUp is a gamified self-improvement web app with RPG elements - XP, levels, quests, guilds, leaderboards, journals, challenges, and an AI assistant.",
+        tech: ["React", "Vite", "Node.js", "Express", "Prisma", "Supabase"],
+        icon: "",
+        liveUrl: "https://limitup.site",
+        image: "/assets/LIMITUP.png"
+      },
+      {
+        title: "StickToon E-Commerce",
+        description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+        icon: "",
+        // githubUrl: "https://github.com/Anish974",
+        liveUrl: "https://sticktoon.shop/",
+        image: "/assets/StickToonFront.png"
+      },
+      {
         title: "ResumeWell",
         description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
         tech: ["React", "CSS", "Python", "SQL"],
@@ -35,15 +52,6 @@ const projectCategories = {
         icon: "🍊",
         githubUrl: "https://github.com/Anish974/Orange-Counter",
         image: "/assets/orangecount.png"
-      },
-      {
-        title: "StickToon E-Commerce",
-        description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
-        tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
-        icon: "",
-        // githubUrl: "https://github.com/Anish974",
-        liveUrl: "https://sticktoon.shop/",
-        image: "/assets/StickToonFront.png"
       }
     ]
   },
@@ -82,6 +90,14 @@ const projectCategories = {
         githubUrl: "https://github.com/Anish974/anish-portfolio",
         liveUrl: "https://anishpatankar.vercel.app/",
         image: "/assets/Portfolio.png"
+      },
+      {
+        title: "LimitUP",
+        description: "LimitUp is a gamified self-improvement web app with RPG elements - XP, levels, quests, guilds, leaderboards, journals, challenges, and an AI assistant.",
+        tech: ["React", "Vite", "Node.js", "Express", "Prisma", "Supabase"],
+        icon: "",
+        liveUrl: "https://limitup.site",
+        image: "/assets/LIMITUP.png"
       }
     ]
   },

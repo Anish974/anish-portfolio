@@ -5,21 +5,21 @@ import { MapPin, Calendar, ExternalLink } from "lucide-react";
 
 const experiences = [
 	{
-		title: "Intern",
+		title: "Co-Founder",
 		company: "BERAM Pvt. Ltd.",
 		location: "Nagpur",
 		period: "June 2025 – Present",
 		link: "https://beramdrones.com",
 		works: [
 			{
-				title: "ATMS‑MVP : Aerial Traffic Management System",
+				title: "UTMS‑MVP : Unmanned Traffic Management System",
 				description: [
 					"Built an interactive React dashboard to monitor and control drone state, missions, and safety workflows in real time.",
 					"Implemented live telemetry streaming over WebSockets for continuous updates of position, attitude, battery, and mission status.",
 					"Developed Python backend scripts (Flask + pymavlink) to handle MAVLink communication, mission execution, and failsafe logic with the Pixhawk flight controller.",
 				],
 				tech: ["React", "Node.js", "Python", "Flask", "WebSocket" ,"MAVLink" ,"Pixhawk" ,"ArduPilot"],
-				image: "/assets/atms-dashboard.png",
+				image: "/assets/UTMS_DASHBOARD.png",
 			},
 			{
 				title: "Indigenous Server : A Self-Hosted Infrastructure",
