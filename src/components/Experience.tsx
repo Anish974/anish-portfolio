@@ -14,9 +14,9 @@ const experiences = [
 			{
 				title: "UTMS‑MVP : Unmanned Traffic Management System",
 				description: [
-					"Built an interactive React dashboard to monitor and control drone state, missions, and safety workflows in real time.",
-					"Implemented live telemetry streaming over WebSockets for continuous updates of position, attitude, battery, and mission status.",
-					"Developed Python backend scripts (Flask + pymavlink) to handle MAVLink communication, mission execution, and failsafe logic with the Pixhawk flight controller.",
+					"Built a UAV traffic and mission management system focused on handling drones, mission planning data, and operational workflows in one place.",
+					"Implemented organized modules for mission records, drone records, user/admin control flows, logs and audits, and uploaded operational files.",
+					"Prepared the workspace to run all major parts together through predefined run tasks, enabling the full system to launch as one coordinated project.",
 				],
 				tech: ["React", "Node.js", "Python", "Flask", "WebSocket" ,"MAVLink" ,"Pixhawk" ,"ArduPilot"],
 				image: "/assets/UTMS_DASHBOARD.png",

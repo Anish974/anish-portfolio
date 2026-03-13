@@ -20,7 +20,7 @@ const projectCategories = {
     icon: Globe,
     projects: [
       {
-        title: "LimitUP",
+        title: "LimitUP: Gamified Self-Improvement App",
         description: "LimitUp is a gamified self-improvement web app with RPG elements - XP, levels, quests, guilds, leaderboards, journals, challenges, and an AI assistant.",
         tech: ["React", "Vite", "Node.js", "Express", "Prisma", "Supabase"],
         icon: "",
@@ -28,7 +28,7 @@ const projectCategories = {
         image: "/assets/LIMITUP.png"
       },
       {
-        title: "StickToon E-Commerce",
+        title: "StickToon : E-Commerce Shop",
         description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
         tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
         icon: "",
@@ -37,7 +37,7 @@ const projectCategories = {
         image: "/assets/StickToonFront.png"
       },
       {
-        title: "ResumeWell",
+        title: "ResumeWell : Resume Management Platform",
         description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
         tech: ["React", "CSS", "Python", "SQL"],
         icon: "",
