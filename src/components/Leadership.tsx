@@ -11,7 +11,7 @@ const leadership = [
     title: "Sports Secretary – AIML Department",
     description: "Guiding and coordinating all Sports Teams of AIML Dept. with organizational skills and team motivation.",
     period: "2025-2026",
-    image: "/assets/Sports-secretory.jpg"
+    image: "/assets/SPORTS_SEC.jpeg"
   },
   {
     title: "Captain – RCOEM Volleyball Team",

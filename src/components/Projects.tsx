@@ -44,14 +44,6 @@ const projectCategories = {
         githubUrl: "https://github.com/Anish974/ResumeWell",
         liveUrl: "https://resumewell.vercel.app/",
         image: "/assets/resumewell.png"
-      },
-      {
-        title: "Orange Counter ML App",
-        description: "Real-time Orange Detection System using fine-tuned YOLOv8 on a custom dataset. Features responsive web interface with drag-and-drop upload, live camera capture, dark mode, and Flask-based detection API.",
-        tech: ["Python", "Flask","Machine Learning","YOLOv8", "OpenCV", "HTML", "CSS", "JS"],
-        icon: "🍊",
-        githubUrl: "https://github.com/Anish974/Orange-Counter",
-        image: "/assets/orangecount.png"
       }
     ]
   },
