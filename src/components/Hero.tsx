@@ -93,7 +93,7 @@ export function Hero() {
                   variant="outline"
                   onClick={() => {
                     const link = document.createElement('a');
-                    link.href = '/assets/Anish Resume SDE-2.pdf';
+                    link.href = '/assets/Anish Resume NEW.pdf';
                     link.download = 'Anish_Patankar_Resume.pdf';
                     document.body.appendChild(link);
                     link.click();
