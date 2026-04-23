@@ -1,7 +1,7 @@
 import { MapPin, Briefcase, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/profile.png";
 import { useState, useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import animationData from "@/assets/Background looping animation.json";
