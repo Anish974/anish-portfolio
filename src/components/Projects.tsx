@@ -36,15 +36,15 @@ const projectCategories = {
         liveUrl: "https://sticktoon.shop/",
         image: "/assets/StickToonFront.png"
       },
-      {
-        title: "ResumeWell : Resume Management Platform",
-        description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
-        tech: ["React", "CSS", "Python", "SQL"],
-        icon: "",
-        githubUrl: "https://github.com/Anish974/ResumeWell",
-        liveUrl: "https://resumewell.vercel.app/",
-        image: "/assets/resumewell.png"
-      }
+      // {
+      //   title: "ResumeWell : Resume Management Platform",
+      //   description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
+      //   tech: ["React", "CSS", "Python", "SQL"],
+      //   icon: "",
+      //   githubUrl: "https://github.com/Anish974/ResumeWell",
+      //   liveUrl: "https://resumewell.vercel.app/",
+      //   image: "/assets/resumewell.png"
+      // }
     ]
   },
   ml: {
@@ -65,15 +65,15 @@ const projectCategories = {
     label: "Web Development",
     icon: Globe,
     projects: [
-      {
-        title: "ResumeWell",
-        description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
-        tech: ["React", "CSS", "Python", "SQL"],
-        icon: "",
-        githubUrl: "https://github.com/Anish974/ResumeWell",
-        liveUrl: "https://resumewell.vercel.app/",
-        image: "/assets/resumewell.png"
-      },
+      // {
+      //   title: "ResumeWell",
+      //   description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
+      //   tech: ["React", "CSS", "Python", "SQL"],
+      //   icon: "",
+      //   githubUrl: "https://github.com/Anish974/ResumeWell",
+      //   liveUrl: "https://resumewell.vercel.app/",
+      //   image: "/assets/resumewell.png"
+      // },
       {
         title: "Portfolio Website",
         description: "Modern, responsive personal portfolio showcasing projects and skills with dark mode support and smooth animations.",
