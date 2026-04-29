@@ -127,7 +127,7 @@ export function Skills() {
           ))}
         </Tabs>
 
-        {/* Competitive Programming Platforms */}
+        {/* Competitive Programming Platforms
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mt-8 sm:mt-12 max-w-2xl mx-auto">
           <Button
             variant="outline"
@@ -153,6 +153,7 @@ export function Skills() {
             <ExternalLink className="h-4 w-4 ml-2 opacity-70 group-hover:opacity-100 transition-opacity" />
           </Button>
         </div>
+        */}
       </div>
     </section>
   );
