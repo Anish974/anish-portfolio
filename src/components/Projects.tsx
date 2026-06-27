@@ -28,14 +28,30 @@ const projectCategories = {
         image: "/assets/LIMITUP.png"
       },
       {
-        title: "StickToon : E-Commerce Shop",
-        description: "Fully responsive e-commerce frontend for a sticker brand. Built complete UI from scratch with modern design principles.",
-        tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+        title: "DocFlow: Web-Based PDF Editor",
+        description: "Edit, modify, sign, and redact PDF files directly inside your browser without installing software. Quickly fix text typos, stamp e-signatures, blackout private details securely, and rearrange pages in seconds.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "WebAssembly", "WASM"],
         icon: "",
-        // githubUrl: "https://github.com/Anish974",
-        liveUrl: "https://sticktoon.shop/",
-        image: "/assets/StickToonFront.png"
+        liveUrl: "https://docflow.ayuslabs.com/",
+        image: "/assets/DocFlow.png"
       },
+      {
+        title: "Praxis: Interactive Learning Platform",
+        description: "Learn web development by doing. Write real HTML, CSS, and JavaScript in an interactive editor, get instant live previews, and receive AI-powered hints when you get stuck.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "Monaco Editor"],
+        icon: "",
+        liveUrl: "https://praxis.ayuslabs.com",
+        image: "/assets/PRAXIS.png"
+      },
+      {
+        title: "AYUS Labs: Official Hub & Landing Page",
+        description: "Official landing page and hub for AYUS Labs, a digital product studio building innovative tools & platforms across AI, productivity, and the creator economy.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+        icon: "",
+        liveUrl: "https://ayuslabs.com",
+        image: "/assets/ayuslabs.png"
+      },
+
       // {
       //   title: "ResumeWell : Resume Management Platform",
       //   description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
@@ -65,15 +81,6 @@ const projectCategories = {
     label: "Web Development",
     icon: Globe,
     projects: [
-      // {
-      //   title: "ResumeWell",
-      //   description: "A secure platform for students to upload, manage, and store resumes online. Features PDF/Word upload, download, delete, and real-time notifications. Deployed on Vercel for global access.",
-      //   tech: ["React", "CSS", "Python", "SQL"],
-      //   icon: "",
-      //   githubUrl: "https://github.com/Anish974/ResumeWell",
-      //   liveUrl: "https://resumewell.vercel.app/",
-      //   image: "/assets/resumewell.png"
-      // },
       {
         title: "Portfolio Website",
         description: "Modern, responsive personal portfolio showcasing projects and skills with dark mode support and smooth animations.",
@@ -81,7 +88,7 @@ const projectCategories = {
         icon: "",
         githubUrl: "https://github.com/Anish974/anish-portfolio",
         liveUrl: "https://anishpatankar.vercel.app/",
-        image: "/assets/Portfolio.png"
+        image: "/assets/portfolio.png"
       },
       {
         title: "LimitUP",
@@ -90,6 +97,30 @@ const projectCategories = {
         icon: "",
         liveUrl: "https://limitup.site",
         image: "/assets/LIMITUP.png"
+      },
+      {
+        title: "DocFlow",
+        description: "Edit, modify, sign, and redact PDF files directly inside your browser without installing software. Quickly fix text typos, stamp e-signatures, blackout private details securely, and rearrange pages in seconds.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "WebAssembly", "WASM"],
+        icon: "",
+        liveUrl: "https://docflow.ayuslabs.com/",
+        image: "/assets/DocFlow.png"
+      },
+      {
+        title: "Praxis",
+        description: "Learn web development by doing. Write real HTML, CSS, and JavaScript in an interactive editor, get instant live previews, and receive AI-powered hints when you get stuck.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "Monaco Editor"],
+        icon: "",
+        liveUrl: "https://praxis.ayuslabs.com",
+        image: "/assets/PRAXIS.png"
+      },
+      {
+        title: "AYUS Labs Website",
+        description: "Official landing page and hub for AYUS Labs, a digital product studio building innovative tools & platforms across AI, productivity, and the creator economy.",
+        tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+        icon: "",
+        liveUrl: "https://ayuslabs.com",
+        image: "/assets/ayuslabs.png"
       }
     ]
   },

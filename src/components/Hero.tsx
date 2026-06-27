@@ -65,10 +65,9 @@ export function Hero() {
 
             <div className="space-y-4 w-full">
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl">
-                A Final Year B-Tech student at RCOEM,
-                AI/ML‑focused CSE undergraduate with hands‑on experience in full‑stack web development, database
-                systems, and real‑time machine learning applications. Passionate about drone technologies,
-                automation, and building secure, user‑centric digital solutions.
+                AI/ML‑focused Computer Science Graduate with hands‑on experience in full‑stack web development,
+                database systems, and real‑time machine learning applications. Passionate about drone technologies,
+                automation, and turning ideas into secure, user‑centric digital solutions.
               </p>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground ">
                 Turning ideas into code and data into insight
